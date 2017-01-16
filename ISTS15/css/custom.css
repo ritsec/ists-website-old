@@ -13,6 +13,7 @@ body, html {
   margin-left: auto;
   margin-right: auto;
   color:white;
+  overflow-x:hidden;
 }
 .img-thumbnail {
     display: block;
@@ -24,12 +25,13 @@ body, html {
 {
   font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
-.bgimg-1, .bgimg-3, .bgimg-5 {
+.bgimg-1, .bgimg-3, .Contact {
   position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x:hidden;
 }
 .bgimg-1 {
   background-image: url("world-large.png");
@@ -52,9 +54,14 @@ body, html {
   color: #EEEEEE;
 }
 .bgimg-5{
-  background-image: url("coll2.png");
-  min-height: 75%;
+  min-width: 100%;
+  min-height: 100%;
 }
+.bgimg-5 img{
+  height: 100%;
+  width: 100%;
+}
+
 .Contact{
   background-color: #1c1c1c;
   margin-left: auto;
