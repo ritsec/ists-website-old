@@ -1,0 +1,45 @@
+Hello.
+
+Ok I have redone as much as the site as I can. It is using bootstrap, the CDN for bootstrap is in app/templates/base.html.
+
+The layout of the code is as follows:
+
+app/
+    __init__.py
+    views.py
+    static/
+    templates/
+tmp/
+config.py
+run.py
+
+* the app/static/ directory is where images are. I didn't realize you had it set up so images were under /images/ until after I had set it up and I'm lazy :p.
+* the app/templates/ directory is where html files are. There is one special html file called "base.html". This file contains the nav-bar and the bootstrap CDN
+links, and the general wrapping html tags. You 'import' this into every html file you make, so you don't have to rewrite code. An example of this is done in the
+app/templates/about.html page. TLDR:
+
+app/templates/newfile.html:
+-------------
+{% extends "base.html" %}
+{% block content %}
+<h1> content goes between the blocks!<h1>
+{% endblock $}
+
+
+* in the config.py file, is ISTS_YEAR. This makes it easier to replace what year it is in all the files. To use this, in your app/views.py file you can do something like this:
+
+app/views.py:
+-------------
+@app.route("/whatyearisit")
+def yearDisplay():
+    return render_template("mypage.html", ists_year=app.config['ISTS_YEAR'])
+
+mypage.html:
+------------
+{% extends "base.html" %}
+{% block content %}
+    <h1> The year is {{ists_year}}!</h1>
+{% endblock %}
+
+
+If you have any questions/need anything just hit me up
