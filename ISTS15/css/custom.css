@@ -78,6 +78,7 @@ body, html {
 #aboutISTS {
   background-color: #1c1c1c;
   color: #EEEEEE;
+  overflow-x:hidden;
 }
 #aboutISTS .glyphicon {
   border: 2px solid #EEEEEE;
