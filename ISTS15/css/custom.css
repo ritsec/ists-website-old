@@ -34,11 +34,11 @@ body, html {
   overflow-x:hidden;
 }
 .bgimg-1 {
-  background-image: url("world-large.png");
+  background-image: url("../img/world-large.png");
   min-height: 100%;
 }
 .bgimg-2 {
-  background-image: url("bg2.jpg");
+  background-image: url("../img/bg2.jpg");
   height: 50vh;
   background-size: 100% 100%;
   min-height: 50%;
@@ -46,16 +46,12 @@ body, html {
   font-size: 4vw;
 }
 .bgimg-3 {
-  background-image: url("ubu.jpg");
+  background-image: url("../img/ubu.jpg");
   min-height: 75%;
 }
 .bgimg-4 {
   background-color: #1c1c1c;
   color: #EEEEEE;
-}
-.bgimg-5{
-  min-width: 100%;
-  min-height: 100%;
 }
 .bgimg-5 img{
   height: 100%;
