@@ -1,5 +1,5 @@
 """
-TODO: module docstring
+This module configures the root blueprint and its associated routes.
 """
 # External library imports
 from flask import Blueprint, render_template

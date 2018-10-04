@@ -1,8 +1,6 @@
 """
-TODO: module docstring
+This module stores the application factory.
 """
-# Default library imports
-
 # External library imports
 from flask import Flask
 
