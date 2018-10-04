@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "14/base.html" %}
 {% block content %}
 <div id="container" class="container">
     <div id="megarow" class="row">
@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-4">
-                <img class="aligncenter" src="static/competition.jpg" width="387" height="300">
+                <img class="aligncenter" src="{{ url_for('static', filename='competition.jpg') }}" width="387" height="300">
             </div>
         </div>
         <!-- Don't judge my css skills... Not sure of a better way to create a gap -->

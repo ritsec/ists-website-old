@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "14/base.html" %}
 {% block content %}
 
 <div class="container" style="background:white">
@@ -12,7 +12,7 @@
                 <hr>
             </div>
             <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="static/ISTSBig.jpg" alt="">
+                    <img class="img-responsive img-border-left" src="{{ url_for('static', filename='ISTSBig.jpg') }}" alt="">
                     <p></p>
               </div>
             <div class="col-md-6">

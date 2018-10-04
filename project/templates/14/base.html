@@ -23,28 +23,30 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body background="static/background.png">
+<body background="{{ url_for('static', filename='background.png') }}">
 
 <div id="header">
     <div id="logo">
-     <a href="https://ists.sparsa.org/"><img src="static/logo.png" width="300" height="100"></a>
+     <a href="{{ url_for('fourteen.index') }}"><img src="{{ url_for('static', filename='logo.png') }}" width="300" height="100"></a>
     </div>
 </div>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/index">ISTS</a>
+      <a class="navbar-brand" href="{{ url_for('fourteen.index') }}">ISTS</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/index">Home</a></li>
-      <li><a href="/about">About</a></li>
+      <li><a href="{{ url_for('fourteen.index') }}">Home</a></li>
+      <li><a href="{{ url_for('fourteen.about') }}">About</a></li>
       <!-- <li><a href="#">ISTS {{ists_year}} Schedule</a></li> -->
-      <li><a href="/news">News</a></li>
+      <li><a href="{{ url_for('fourteen.news') }}">News</a></li>
       <!-- <li><a href="#">Sponsors</a></li> -->
-      <li><a href="/sponsors">Past Sponsors</a></li>
+      <li><a href="{{ url_for('fourteen.sponsors') }}">Past Sponsors</a></li>
+      <!--
       <li><a href="#">Downloads</a></li>
       <li><a href="#">Media</a></li>
       <li><a href="#">Contact</a></li>
+      -->
     </ul>
   </div>
 </nav>
