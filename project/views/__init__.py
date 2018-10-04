@@ -1,13 +1,10 @@
 """
 TODO: module docstring
 """
-from flask import Blueprint
-
-
-# Define views
-root = Blueprint('root', __name__, template_folder='templates')
+# Internal imports
+from project.views import root
 
 # Pack views for registration
 views = [
-    root,
+    root.bp,
 ]
