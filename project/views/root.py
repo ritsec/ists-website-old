@@ -36,3 +36,8 @@ def sponsors():
 def news():
     # TODO: remove hardcoded year values
     return render_template('news.html', title='sponsors', ists_year='17', year='2019')
+
+
+@bp.route('/new-index')
+def new_index():
+    return render_template('new-index.html')
