@@ -18,19 +18,27 @@
   <!-- TODO: update og:url value -->
   <meta property="og:url" content="" />
 
-  <!-- Stylesheets and scripts -->
+  {% if title %}
+  <title>{{ title }} - ISTS</title>
+  {% else %}
+  <title>ISTS</title>
+  {% endif %}
+
+  <!-- Links -->
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
   {% block scripts %}{% endblock %}
 </head>
 <body>
 <header>
+  <img src="{{ url_for('static', filename='img/ists-logo.png') }}" alt="ISTS Logo" height="50" width="50" />
   <nav>
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/news">News</a></li>
-      <li><a href="/sponsors">Sponsors</a></li>
     </ul>
   </nav>
+  <img src="{{ url_for('static', filename='img/ritsec-logo.png') }}" alt="RITSEC Logo" height="50" width="182" />
 </header>
 <main>
   {% block content %}{% endblock %}
