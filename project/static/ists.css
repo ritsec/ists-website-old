@@ -1,0 +1,92 @@
+/* =====
+General
+===== */
+body {
+    background: url("/static/img/world-large.png") center;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font-family: monospace;
+    color: white;
+    font-size: 1.5em;
+    max-width: 1080px;
+    margin: auto;
+}
+
+section {
+    background: rgba(51, 51, 51, 0.7);
+    padding: 2em;
+    margin: 1em;
+}
+
+section.challenges {
+    background: none;
+}
+
+section.challenges h1 {
+    text-align: center;
+}
+
+div.challenge-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+div.challenge {
+    padding: 0 2em;
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+/* =====
+Navigation bar
+===== */
+nav {
+    font-family: monospace;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar links */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(51, 51, 51, 0.7);
+}
+
+nav li {
+    float: left;
+    padding: 1em 0.5em;
+}
+
+nav li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Darken when hovering over link */
+nav li:hover {
+    background-color: #111111;
+}
+
+/* Make that stuff responsive */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        float: none;
+    }
+}
