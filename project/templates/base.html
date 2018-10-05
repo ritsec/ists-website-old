@@ -33,9 +33,13 @@
   <img src="{{ url_for('static', filename='img/ists-logo.png') }}" alt="ISTS Logo" height="50" width="50" />
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/news">News</a></li>
+      <li><a href="{{ url_for('root.index') }}">Home</a></li>
+      <li><a href="{{ url_for('root.about') }}">About</a></li>
+      <li><a href="{{ url_for('root.news') }}">News</a></li>
+      <li><a href="{{ url_for('archive.index') }}">Archive</a></li>
+      <ul>
+        <li><a href="">Ded link</a></li>
+      </ul>
     </ul>
   </nav>
   <img src="{{ url_for('static', filename='img/ritsec-logo.png') }}" alt="RITSEC Logo" height="50" width="182" />
