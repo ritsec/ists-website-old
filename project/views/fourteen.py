@@ -9,7 +9,6 @@ from flask import Blueprint, render_template
 ##
 bp = Blueprint(
     'fourteen', __name__,
-    static_folder='static/14',
     url_prefix='/14',
 )
 
