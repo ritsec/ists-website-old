@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ID=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
-  <link href = "/css/custom.css" rel="stylesheet">
+  <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
+  <link href = "{{ url_for('static', filename='15/css/custom.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <img src="img/lock.png" height="50" width="100"></img>
+      <img src="{{ url_for('static', filename='15/img/lock.png') }}" height="50" width="100"></img>
       <a class="navbar-brand" href="#"></a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
@@ -216,7 +216,7 @@
 </div>
 
 <div id="bgimg-5" class="bgimg-5">
-  <img src="img/sponsors.png">
+  <img src="{{ url_for('static', filename='15/img/sponsors.png') }}">
 </div>
 
 <div id="Contact" class="Contact">
@@ -234,7 +234,7 @@
     </div>
 
     <div class="col-md-4">
-      <img src="img/contact.png" width="75%" height="75%" align="CENTER">
+      <img src="{{ url_for('static', filename='15/img/contact.png') }}" width="75%" height="75%" align="CENTER">
     </div>
 
     <div class="col-md-4">

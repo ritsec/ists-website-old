@@ -13,5 +13,5 @@ from project.views import (
 views = [
     root.bp,
     fourteen.bp,
-#    fifteen.bp,
+    fifteen.bp,
 ]
