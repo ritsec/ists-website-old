@@ -27,3 +27,8 @@ def about():
 @bp.route('/news')
 def news():
     return render_template('news.html')
+
+
+@bp.route('/register')
+def register():
+    return render_template('register.html')

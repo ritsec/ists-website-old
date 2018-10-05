@@ -22,3 +22,8 @@ bp = Blueprint(
 @bp.route('/index')
 def index():
     return render_template('archive/index.html')
+
+
+@bp.route('/scores')
+def scores():
+    return render_template('archive/scores.html')
