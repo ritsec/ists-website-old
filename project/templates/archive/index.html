@@ -3,6 +3,10 @@
 {% block content %}
   <h1>ISTS Archive</h1>
   <p>
-  Old stuff
+    You can check out the old website for <a href="{{ url_for('fourteen.index') }}">ISTS 14</a>
+    or <a href="{{ url_for('fifteen.index') }}">ISTS 15</a> if you want!
+  </p>
+  <p>
+    For past scores, check out our <a href="{{ url_for('archive.scores') }}">scores page</a>.
   </p>
 {% endblock %}

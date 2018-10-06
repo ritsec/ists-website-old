@@ -2,7 +2,9 @@
 General
 ===== */
 body {
-    background: url("/static/img/world-large.png") center fixed;
+    /* TODO: zoom that background pic in on AMERICA 🇺🇸 */
+    background: url("/static/img/world-large.png") no-repeat fixed center center;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -16,7 +18,7 @@ main {
 }
 
 section {
-    background: rgba(51, 51, 51, 0.7);
+    background: rgba(51, 51, 51, 0.85);
     padding: 2em;
     margin: 1em;
 }
@@ -47,6 +49,10 @@ div.challenge {
 
 .blue {
     color: blue;
+}
+
+.orange {
+    color: #e89135;
 }
 
 /* =====
