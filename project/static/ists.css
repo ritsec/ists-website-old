@@ -2,7 +2,7 @@
 General
 ===== */
 body {
-    background: url("/static/img/world-large.png") center;
+    background: url("/static/img/world-large.png") center fixed;
     margin: 0;
     padding: 0;
 }
@@ -62,21 +62,23 @@ nav {
 /* Navigation bar links */
 nav ul {
     list-style-type: none;
+    background: rgba(51, 51, 51, 0.7);
+    display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background: rgba(51, 51, 51, 0.7);
-}
-
-nav li {
-    float: left;
-    padding: 1em 0.5em;
 }
 
 nav li a {
     color: white;
+    display: block;
     text-align: center;
+    padding: 1em 0.5em;
     text-decoration: none;
+}
+
+nav li.logo {
+    padding: 1em 0.5em;
 }
 
 /* Darken when hovering over link */
@@ -86,7 +88,11 @@ nav li:hover {
 
 /* Make that stuff responsive */
 @media screen and (max-width: 600px) {
-    nav ul li {
-        float: none;
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li.logo {
+        display: none;
     }
 }
