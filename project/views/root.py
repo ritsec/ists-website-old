@@ -1,8 +1,12 @@
 """
-TODO: module docstring
+This module configures the root blueprint and its associated routes.
 """
+# Default library imports
+import os.path
+
 # External library imports
-from flask import Blueprint, render_template
+from flask import Blueprint, current_app, render_template
+from markdown import markdown as md
 
 ##
 #   Attributes
@@ -16,23 +20,37 @@ bp = Blueprint('root', __name__, template_folder='templates')
 @bp.route('/')
 @bp.route('/index')
 def index():
-    # TODO: remove hardcoded year values
-    return render_template('index.html', title='ISTS', ists_year='17', year='2019')
+    return render_template('index.html')
 
 
 @bp.route('/about')
 def about():
-    # TODO: remove hardcoded year values
-    return render_template('about.html', title='About:ISTS', ists_year='17', year='2019')
-
-
-@bp.route('/sponsors')
-def sponsors():
-    # TODO: remove hardcoded year values
-    return render_template('sponsors.html', title='sponsors', ists_year='17', year='2019')
+    return render_template('about.html')
 
 
 @bp.route('/news')
 def news():
-    # TODO: remove hardcoded year values
-    return render_template('news.html', title='sponsors', ists_year='17', year='2019')
+    # Create path to post files
+    post_path = os.path.join(current_app.instance_path, 'posts', 'post-{}.md')
+
+    # Loop to open each post file until there are none left
+    posts = []
+    try:
+        post_num = 1
+        while True:
+            with open(post_path.format(post_num), 'r') as fp:
+                posts.append(fp.read())
+            post_num += 1
+    except FileNotFoundError:
+        pass
+
+    # Reverse the posts - the highest-numbered posts should appear first
+    posts = posts[::-1]
+
+    # Pass the posts to the template so they get rendered
+    return render_template('news.html', posts=posts, generate_html=md)
+
+
+@bp.route('/register')
+def register():
+    return render_template('register.html')

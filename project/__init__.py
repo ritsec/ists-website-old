@@ -1,8 +1,6 @@
 """
-TODO: module docstring
+This module stores the application factory.
 """
-# Default library imports
-
 # External library imports
 from flask import Flask
 
@@ -23,7 +21,16 @@ def create_app():
         app.config.from_mapping(
             SECRET_KEY='dev',
             ISTS_NUMBER='00',
-            YEAR='0000',
+            YEAR='1970',
+            MONTH='January',
+            SETUP_DAY='1',
+            FIRST_DAY='2',
+            SECOND_DAY='3',
+            ROOM='USC-1600',
+            BLUE_REG_OPEN=True,
+            BLUE_REG_LINK='https://google.com',
+            WHITE_REG_LINK='https://google.com',
+            CONTACT_EMAIL='ritsecclub@gmail.com',
         )
 
     # Set production configuration, if performing a production deployment
