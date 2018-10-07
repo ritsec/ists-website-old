@@ -1,5 +1,37 @@
 {% extends 'base.html' %}
 {% set title = 'About' %}
+{% set number = config['ISTS_NUMBER'] %}
+{% set month = config['MONTH'] %}
+{% set day1 = config['SETUP_DAY'] %}
+{% set day2 = config['FIRST_DAY'] %}
+{% set day3 = config['SECOND_DAY'] %}
+{% set year = config['YEAR'] %}
 {% block content %}
-  <!-- TODO: add per-year information to the about page -->
+  <section class="about">
+    <h1>When?</h1>
+    <p>
+      ISTS {{ number }} will run from {{ month }} {{ day1 }} to {{ day3 }},
+      {{ year }}.  The keynote speech will be given on the evening of
+      {{ month }} {{ day1 }}, and the competition will start the following
+      morning and continue into the next day.
+    </p>
+    <h1>Where?</h1>
+    <p>
+      ISTS {{ config['ISTS_NUMBER'] }} will be held in {{ config['ROOM'] }} at
+      the main campus of the Rochester Institute of Technology.  More
+      information about navigation to RIT can be found on
+      <a href="https://www.rit.edu/maps/">their website</a>.
+    </p>
+    <h1>Who?</h1>
+    <p>
+      ISTS is hosted by RITSEC, the student-run computer security club at the
+      Rochester Institute of Technology.  All of the event planning, content
+      creation, and day-of volunteering is done by dedicated members of RITSEC.
+    </p>
+    <p>
+      All teams that compete at ISTS are composed entirely of college students.
+      Each year, several universities around the country are invited to send a
+      team to ISTS.  RIT students form the remaining teams.
+    </p>
+  </section>
 {% endblock %}

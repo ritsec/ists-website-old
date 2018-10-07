@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 {% set title = 'Archive' %}
 {% block content %}
-  <!-- TODO: organize and style this better -->
-  <h1>ISTS Archive</h1>
-  <p>
-    You can check out the old website for <a href="{{ url_for('fourteen.index') }}">ISTS 14</a>
-    or <a href="{{ url_for('fifteen.index') }}">ISTS 15</a> if you want!
-  </p>
-  <p>
-    For past scores, check out our <a href="{{ url_for('archive.scores') }}">scores page</a>.
-  </p>
+  <section class="archive">
+    <h1>ISTS Archive</h1>
+    <p>
+      Here you can check out the past websites for
+      <a href="{{ url_for('fourteen.index') }}">ISTS 14</a> or
+      <a href="{{ url_for('fifteen.index') }}">ISTS 15</a>.
+    </p>
+    <p>
+      Also, check back here later to view the champions from past years!
+    </p>
+  </section>
 {% endblock %}
