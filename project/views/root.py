@@ -1,8 +1,12 @@
 """
 This module configures the root blueprint and its associated routes.
 """
+# Default library imports
+import os.path
+
 # External library imports
-from flask import Blueprint, render_template
+from flask import Blueprint, current_app, render_template
+from markdown import markdown as md
 
 ##
 #   Attributes
@@ -26,7 +30,25 @@ def about():
 
 @bp.route('/news')
 def news():
-    return render_template('news.html')
+    # Create path to post files
+    post_path = os.path.join(current_app.instance_path, 'posts', 'post-{}.md')
+
+    # Loop to open each post file until there are none left
+    posts = []
+    try:
+        post_num = 1
+        while True:
+            with open(post_path.format(post_num), 'r') as fp:
+                posts.append(fp.read())
+            post_num += 1
+    except FileNotFoundError:
+        pass
+
+    # Reverse the posts - the highest-numbered posts should appear first
+    posts = posts[::-1]
+
+    # Pass the posts to the template so they get rendered
+    return render_template('news.html', posts=posts, generate_html=md)
 
 
 @bp.route('/register')

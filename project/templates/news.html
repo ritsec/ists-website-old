@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% set title = 'News' %}
 {% block content %}
-  <!-- TODO: add template code to render markdown -->
+  {% for post in posts %}
+    <section class="post">
+      {{ generate_html(post)|safe }}
+    </section>
+  {% endfor %}
 {% endblock %}
