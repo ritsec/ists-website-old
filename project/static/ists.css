@@ -9,8 +9,23 @@ body {
     padding: 0;
 }
 
-/* TODO: add style for links */
-/* TODO: add style for the subtitle */
+a:link {
+    color: #e89135;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #e89135;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+}
 
 main {
     font-family: monospace;
@@ -83,6 +98,22 @@ nav li a {
     display: block;
     text-align: center;
     padding: 1em 0.5em;
+    text-decoration: none;
+}
+/* visited hover active */
+
+nav li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:active {
+    color: white;
     text-decoration: none;
 }
 
