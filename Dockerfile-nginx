@@ -1,0 +1,15 @@
+# Use official nginx image on debian
+FROM nginx:mainline
+
+# Install certbot requirements
+RUN echo "deb http://ftp.debian.org/debian stretch-backports main" >> \
+    /etc/apt/sources.list
+RUN apt-get update -y
+RUN apt-get install -y \
+    python-certbot-nginx -t stretch-backports
+
+# Copy over nginx config file
+COPY ./nginx.conf /etc/nginx/nginx.conf
+
+# Run certbot
+RUN certbot --authenticator webroot --installer nginx

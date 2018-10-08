@@ -1,0 +1,29 @@
+version: '3'
+services:
+
+  website:
+    build:
+      context: ./
+      dockerfile: Dockerfile-website
+    image: ists:latest
+    expose:
+      - "8000"
+    restart: always
+    volumes:
+      - "./config.py:/ists/instance/config.py"
+      - "./website-posts:/ists/instance/posts"
+
+  proxy:
+    build:
+      context: ./
+      dockerfile: Dockerfile-nginx
+    image: ists-proxy:latest
+    expose:
+      - "443"
+      - "80"
+    ports:
+      - "0.0.0.0:444:443"
+      - "0.0.0.0:81:80"
+    restart: always
+    depends_on:
+      - website
