@@ -7,6 +7,9 @@ build:
   stage: build
   image: docker:latest
 
+  before_script:
+    - "cat /etc/*-release"
+
   script:
     - "docker build -t ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME} ."
     - "docker run ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME}"
