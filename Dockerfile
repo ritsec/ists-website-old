@@ -33,5 +33,5 @@ COPY project ./project
 # Configure application
 COPY config.py ./instance/config.py
 
-# Mount website posts volume
-VOLUME ./posts ./instance/posts
+# Add website posts
+COPY ./posts ./instance/posts
