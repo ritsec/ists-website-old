@@ -1,8 +1,8 @@
 stages:
-  - deploy
+  - build
 
-deploy:
-  stage: deploy
+build:
+  stage: build
   image: gitlab/dind:latest
   only:
     - "master"
