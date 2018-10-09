@@ -1,6 +1,9 @@
 # Use the official python image for python3 - using Debian because idk.
 FROM python:3-stretch
 
+# Will be listening on port 8000
+EXPOSE 8000
+
 # Create working directory
 WORKDIR /ists
 
@@ -26,3 +29,9 @@ ENV FLASK_APP project
 
 # Copy over application files
 COPY project ./project
+
+# Configure application
+COPY config.py ./instance/config.py
+
+# Mount website posts volume
+VOLUME ./website-posts ./instance/posts
