@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ists-uwsgi:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 127.0.0.1:8001:8000
+    restart: always
