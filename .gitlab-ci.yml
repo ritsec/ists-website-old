@@ -14,6 +14,7 @@ test:
     - pip3 install --upgrade pip
     - pip3 install -r requirements.txt
     - export FLASK_APP=project
+    - mkdir instance
     - cp config.py instance/config.py
     - cp -r posts instance/posts
 
