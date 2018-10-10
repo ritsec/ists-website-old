@@ -8,15 +8,16 @@ EXPOSE 8000
 WORKDIR /ists
 
 # Install packages required to build uWSGI
-RUN apt-get update -y
-RUN apt-get install -y \
+RUN apt-get update -y && apt-get install -y \
     build-essential \
     python-dev
 
-# Install pip requirements
+# Install pip requirements.  uWSGI is kept separate because it isn't required
+# by the application, it's just a deployment requirement.
 COPY requirements.txt ./requirements.txt
-RUN pip3 install --upgrade pip
-RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip && \
+    pip3 install -r requirements.txt && \
+    pip3 install uwsgi
 
 # Configure uWSGI
 COPY uwsgi.ini ./uwsgi.ini
