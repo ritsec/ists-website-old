@@ -14,7 +14,7 @@ RUN apt-get install -y \
     python-dev
 
 # Install pip requirements
-COPY requrements.txt ./requirements.txt
+COPY requirements.txt ./requirements.txt
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 
