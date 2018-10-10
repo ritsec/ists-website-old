@@ -2,8 +2,8 @@ stages:
   - test
   - deploy
 
-build:
-  stage: build
+test:
+  stage: test
   image: python:3-stretch
   tags:
     - docker
