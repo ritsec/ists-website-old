@@ -3,55 +3,55 @@ stages:
   - release
   - deploy
 
-  build:
-    stage: build
-    tags:
-      - docker
-    image: docker:latest
+build:
+  stage: build
+  tags:
+    - docker
+  image: docker:latest
 
-    script:
-      - "docker build -t ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME} ."
-      - "docker run ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME}"
+  script:
+    - "docker build -t ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME} ."
+    - "docker run ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME}"
 
-  release:
-    stage: release
-    tags:
-      - docker
-    image: docker:latest
-    only:
-      - "master"
-    services:
-      - docker:dind
-    variables:
-      DOCKER_DRIVER: "overlay"
+release:
+  stage: release
+  tags:
+    - docker
+  image: docker:latest
+  only:
+    - "master"
+  services:
+    - docker:dind
+  variables:
+    DOCKER_DRIVER: "overlay"
 
-    before_script:
-      - "docker version"
-      - "docker info"
-      - "docker login -u gitlab-ci-token -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
+  before_script:
+    - "docker version"
+    - "docker info"
+    - "docker login -u gitlab-ci-token -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
 
-    script:
-      - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
-      - "docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
+  script:
+    - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
+    - "docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
 
-    after_script:
-      - "docker logout ${CI_REGISTRY}"
+  after_script:
+    - "docker logout ${CI_REGISTRY}"
 
-  deploy:
-    stage: deploy
-    tags:
-      - docker
-    image: gitlab/dind:latest
-    only:
-      - "master"
-    services:
-      - docker:dind
+deploy:
+  stage: deploy
+  tags:
+    - docker
+  image: gitlab/dind:latest
+  only:
+    - "master"
+  services:
+    - docker:dind
 
-    before_script:
-      - mkdir -p ~/.ssh
-      - echo "$DEPLOY_SERVER_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-      - chmod 600 ~/.ssh/id_rsa
-      - ssh-keyscan -H $DEPLOYMENT_SERVER_IP >> ~/.ssh/known_hosts
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo "$DEPLOY_SERVER_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H $DEPLOYMENT_SERVER_IP >> ~/.ssh/known_hosts
 
-    script:
-      - ssh $DEPLOYMENT_SERVER_USER@$DEPLOYMENT_SERVER_IP "docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}; docker run ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest -p localhost:8001:8000"
+  script:
+    - ssh $DEPLOYMENT_SERVER_USER@$DEPLOYMENT_SERVER_IP "docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}; docker run ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest -p localhost:8001:8000"
