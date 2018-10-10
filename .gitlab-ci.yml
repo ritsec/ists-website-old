@@ -20,7 +20,7 @@ test:
     - cp -r posts instance/posts
 
   script:
-    - uwsgi --ini uwsgi.ini
+    - uwsgi --ini uwsgi.ini -d
 
 deploy:
   stage: deploy
