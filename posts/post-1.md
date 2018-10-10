@@ -1,8 +1,6 @@
-# Test post
-**POSTED**: 9 October 2018 17:08 EDT
+# New Website
+Posted: October 10, 2018
 
-This is a test post.
-
-Please ignore it.
-
-No updoots.
+ISTS now has a (mostly) new website!  If you liked one of the old websites,
+don't worry!  A few of the websites from years past are still being hosted.
+Check out the Archive page for links!

@@ -36,6 +36,7 @@ deploy:
     - echo "$DEPLOY_SSH_KEY" | tr -d '\r' > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
     - ssh-keyscan -H $DEPLOY_IP >> ~/.ssh/known_hosts
+    - echo $CONFIG_PY > config.py
     - scp -r ./ $DEPLOY_USER@$DEPLOY_IP:/home/user/ists-website
 
   script:
