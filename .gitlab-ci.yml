@@ -24,6 +24,7 @@ stages:
 
 deploy:
   stage: deploy
+  image: debian:stretch
   tags:
     - docker
   only:
