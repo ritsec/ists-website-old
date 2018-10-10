@@ -2,33 +2,34 @@ stages:
   - build
   - release
   - deploy
+image: docker:stable
+services:
+  - docker:dind
 
 build:
   stage: build
   tags:
     - docker
-  image: docker:latest
 
   script:
-    - "docker build -v /var/run/docker.sock:/var/run/docker.sock -t ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME} ."
-    - "docker run -v /var/run/docker.sock:/var/run/docker.sock ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME}"
+    - "docker build -t ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME} ."
+    - "docker run ${CI_PROJECT_PATH}:build-${CI_BUILD_REF_NAME}"
 
 release:
   stage: release
   tags:
     - docker
-  image: docker:latest
   only:
     - "master"
 
   before_script:
     - "docker version"
     - "docker info"
-    - "docker login -v /var/run/docker.sock:/var/run/docker.sock-u gitlab-ci-token -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
+    - "docker login -u gitlab-ci-token -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
 
   script:
-    - "docker build -v /var/run/docker.sock:/var/run/docker.sock-t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
-    - "docker push -v /var/run/docker.sock:/var/run/docker.sock${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
+    - "docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest --pull ."
+    - "docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest"
 
   after_script:
     - "docker logout ${CI_REGISTRY}"
@@ -37,11 +38,8 @@ deploy:
   stage: deploy
   tags:
     - docker
-  image: gitlab/dind:latest
   only:
     - "master"
-  services:
-    - docker:dind
 
   before_script:
     - mkdir -p ~/.ssh
