@@ -2,25 +2,25 @@ stages:
   - test
   - deploy
 
-test:
-  stage: test
-  image: python:3-stretch
-  tags:
-    - docker
-
-  before_script:
-    - apt-get update -y
-    - apt-get install -y build-essential python-dev
-    - pip3 install --upgrade pip
-    - pip3 install -r requirements.txt
-    - pip3 install uwsgi
-    - export FLASK_APP=project
-    - mkdir instance
-    - cp config.py instance/config.py
-    - cp -r posts instance/posts
-
-  script:
-    - uwsgi --ini uwsgi.ini -d
+    # test:
+    #   stage: test
+    #   image: python:3-stretch
+    #   tags:
+    #     - docker
+    # 
+    #   before_script:
+    #     - apt-get update -y
+    #     - apt-get install -y build-essential python-dev
+    #     - pip3 install --upgrade pip
+    #     - pip3 install -r requirements.txt
+    #     - pip3 install uwsgi
+    #     - export FLASK_APP=project
+    #     - mkdir instance
+    #     - cp config.py instance/config.py
+    #     - cp -r posts instance/posts
+    # 
+    #   script:
+    #     - uwsgi --ini uwsgi.ini &
 
 deploy:
   stage: deploy
