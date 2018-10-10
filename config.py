@@ -31,10 +31,10 @@ ROOM = 'USC-1600'
 BLUE_REG_OPEN = True
 
 # The link for blue team registration for the next ISTS.
-BLUE_REG_LINK = 'blueteam-ists.ritsec.club'
+BLUE_REG_LINK = 'http://blueteam-ists.ritsec.club'
 
 # The link for white team registration for the next ISTS.
-WHITE_REG_LINK = 'whiteteam.ritsec.club'
+WHITE_REG_LINK = 'http://whiteteam.ritsec.club'
 
 # The contact email for more information about non-RIT blue team information.
 CONTACT_EMAIL = 'ritsecclub@gmail.com'
