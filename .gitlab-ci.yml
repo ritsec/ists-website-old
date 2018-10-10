@@ -39,4 +39,4 @@ deploy:
     - scp -r ./ $DEPLOY_USER@$DEPLOY_IP:/home/user/ists-website
 
   script:
-    - ssh $DEPLOY_USER@$DEPLOY_IP "docker build -t ists-uwsgi:latest /home/user/ists-website && docker run --name ists-website -p localhost:8001:8000 ists-uwsgi:latest"
+    - ssh $DEPLOY_USER@$DEPLOY_IP "docker build -t ists-uwsgi:latest /home/user/ists-website && docker run --name ists-website -p 127.0.0.1:8001:8000 ists-uwsgi:latest"
