@@ -36,7 +36,7 @@ deploy:
     - echo "$DEPLOY_SSH_KEY" | tr -d '\r' > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
     - ssh-keyscan -H $DEPLOY_IP >> ~/.ssh/known_hosts
-    - scp -r ./ $DEPLOY_USER@DEPLOY_IP
+    - scp -r ./ $DEPLOY_USER@$DEPLOY_IP:/home/user/ists-website
 
   script:
     - ssh $DEPLOY_USER@$DEPLOY_IP "docker build -t ists-uwsgi:latest . && docker run ists-uwsgi:latest --name ists-website -p localhost:8001:8000"
