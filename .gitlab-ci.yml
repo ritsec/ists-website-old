@@ -40,4 +40,4 @@ deploy:
     - scp -r ./ $DEPLOY_USER@$DEPLOY_IP:/home/user/ists-website
 
   script:
-    - ssh $DEPLOY_USER@$DEPLOY_IP "docker-compose up -d --build"
+    - ssh $DEPLOY_USER@$DEPLOY_IP "cd /home/user/ists-website && docker-compose up -d --build"
