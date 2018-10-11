@@ -28,7 +28,7 @@ SECOND_DAY = '24'
 ROOM = 'USC-1600'
 
 # Whether or not registration for blue teams is open for the next ISTS.
-BLUE_REG_OPEN = True
+BLUE_REG_OPEN = False
 
 # The link for blue team registration for the next ISTS.
 BLUE_REG_LINK = 'http://blueteam-ists.ritsec.club'
