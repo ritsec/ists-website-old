@@ -1,3 +1,6 @@
+# Jekyll destination directory
+_site/
+
 # IDE project folders
 .vscode/
 .idea/
