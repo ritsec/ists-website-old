@@ -1,5 +1,7 @@
-# Jekyll destination directory
+# Jekyll directories
 _site/
+.sass-cache
+.jekyll-metadata
 
 # IDE project folders
 .vscode/
