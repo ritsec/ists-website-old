@@ -69,6 +69,10 @@ section.sponsors {
     justify-content: space-around;
 }
 
+section.sponsors img {
+    margin: 1em;
+}
+
 .red {
     color: red;
 }
