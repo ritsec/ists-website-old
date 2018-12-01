@@ -61,6 +61,13 @@ div.challenge {
     text-align: center;
 }
 
+section.sponsors {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
 .red {
     color: red;
 }
