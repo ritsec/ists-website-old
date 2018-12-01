@@ -8,265 +8,257 @@ permalink: /15/
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ID=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
   <link href = "/static/15/css/custom.css" rel="stylesheet">
 </head>
-
 <body>
+  <!-- navigation panel -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-
-<!-- navigation panel -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <img src="/static/15/img/lock.png" height="50" width="100"></img>
-      <a class="navbar-brand" href="#"></a>
+        <img src="/static/15/img/lock.png" height="50" width="100"></img>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#bgimg-1">Home</a></li>
+          <li><a href="#aboutISTS">About</a></li>
+          <li><a href="#bgimg-4">Sponsor ISTS</a></li>
+          <li><a href="#Contact">Register</a></li>
+          <li><a href="https://sites.google.com/g.rit.edu/ists15/home">Schedule</a></li>
+       	  <li><a href="https://sites.google.com/g.rit.edu/ists15scores/home">Scores</a></li> 
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-main">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#bgimg-1">Home</a></li>
-        <li><a href="#aboutISTS">About</a></li>
-        <li><a href="#bgimg-4">Sponsor ISTS</a></li>
-        <li><a href="#Contact">Register</a></li>
-        <li><a href="https://sites.google.com/g.rit.edu/ists15/home">Schedule</a></li>
-     	<li><a href="https://sites.google.com/g.rit.edu/ists15scores/home">Scores</a></li> 
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<div id="bgimg-1" class="bgimg-1">
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <div class="container vertical-center">
-    <div class="jumbotron vertical center">
-      <p class="console"><span><font color="red">root@SPARSA</font>:~# </span><span id="caption"></span><span id="cursor">|</span></p>
-    </div>
-  </div>
-</div>
-
-<div id="aboutISTS" class="pad-section">
-
-  <div class="contianer">
-    <h1 class=text-center><b><font color="red" style="font-family: 'Georgia', serif;">About</font> <font style="font-family: 'Georgia', serif;">ISTS</b></h1><hr width="25%" style="height:3px;background-color:red;border:none;"/>
-    <div class="row text-center">
-      <div class="col-md-6 col-md-offset-3" style="background-color: #1c1c1c">
-        <h4 style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">
-          The Information Security Talent Search (ISTS) competition is an annual three day cyber <font color="red">attack</font>/<font color="#065de8">defend</font> competition hosted at the
-          <font color="#e89106">Rochester Institute of Technology</font> by SPARSA.
-          Each year, colleges from around the North East compete for the coveted title of ISTS champion.
-          Competitors are faced with a wide variety of challenges which are designed to cover as many facets of computing security, system administration, networking and programming as we possibly can.
-          These challenges include code review, architecture design, incident response, and policy writing all while defending a completely student built infrastructure.
-        </h4>
+  <div id="bgimg-1" class="bgimg-1">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container vertical-center">
+      <div class="jumbotron vertical center">
+        <p class="console"><span><font color="red">root@SPARSA</font>:~# </span><span id="caption"></span><span id="cursor">|</span></p>
       </div>
     </div>
   </div>
 
-  <h1 class="text-center"><b><font style="font-family: 'Georgia', serif;">Past Challenges</font></b></h1>
-
-  <div class="row text-center">
-    <br />
-
-    <div class="col-sm-4">
-      <i class="glyphicon glyphicon-zoom-in"> </i>
-      <h4><font style="font-family: 'Georgia', serif;"><font color="#3ab231">Network/System</font> Audit</font></h4>
-      <p style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">Evaluate the current state of the environment and prepare a presentation highlighting infrastructure vulnerabilities and the appropriate remediation.</p>
-    </div>
-
-    <div class="col-sm-4">
-      <i class="glyphicon glyphicon-eye-open"> </i>
-      <h4><font style="font-family: 'Georgia', serif;"><font color="red"> Threat</font> Intelligence</font></h4>
-      <p style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">Set up a honeypot and report the top fifteen attackers every hour.</p>
-    </div>
-
-    <div class="col-sm-4">
-      <i class="glyphicon glyphicon-cloud"> </i>
-      <h4><font style="font-family: 'Georgia', serif;"><font color="#065de8">System</font> Administration</font></h4>
-      <p style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">Your companies aging servers must be replaced. Evaluate three cloud solutions that we can migrate critical services to. Include a 12 month cost analysis.</p>
-    </div>
-  </div>
-</div>
-
-<div id="bgimg-2" class="bgimg-2">
-  <div class="container vertical-center">
-    <div class="jumbotron vertical-center">
-    <div class="row text-center">
-      <blockquote class="blockquote style='vertical-align:middle;'">
-        <h2><font color="#EEEEEE" style="font-size: 30px;">
-          "Not only did I get to test my defensive skills against the professional red team, but my team also got to try out our own offensive techniques against other blue teams.
-          This created a competition atmosphere like no other"
-        </font></h2>
-        <footer class="blockquote-footer"><cite title="Source Title"><font color="#EEEEEE">Skyler T.</font></cite></footer>
-      </blockquote>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div id="bgimg-3" class="bgimg-3">
-  <div class="container">
-    <br />
-    <br />
-    <br />
-    <div class="jumbotron" style='background: rgba(40, 40, 40, 0.7);'>
+  <div id="aboutISTS" class="pad-section">
+    <div class="contianer">
+      <h1 class=text-center><b><font color="red" style="font-family: 'Georgia', serif;">About</font> <font style="font-family: 'Georgia', serif;">ISTS</b></h1><hr width="25%" style="height:3px;background-color:red;border:none;"/>
       <div class="row text-center">
-        <h2 font color="#EEEEEE">How are we <font color="red" style="font-family: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;"> Different?</font></h2>
-        <hr width="25%" style="height:3px;background-color:red;border:none;"/>
-        <br />
-        <p font color="#EEEEEE" style="font-size: 20px;">
-          From day one of competition planning, ISTS is built from the ground up by students.
-          All of the planning, scheduling, sponsorship and red team outreach is done by passionate members of the Security Practices and Research Student Association (SPARSA).
-          Additionally, competitor’s skills are put to the test by adding an external red team of security professionals from industry partners such as Lincoln Labs, Facebook, NCC Group, ZeroFox and Cigital.
-          The red team is performing offensive actions against the competitors during the entire competition.
-          Notable red team members of past ISTS competitions include Raphael Mudge (Creator of Cobalt Strike), Chris Gates (carnal0wnage), and Rob Fuller (Mubix)
-        </p>
+        <div class="col-md-6 col-md-offset-3" style="background-color: #1c1c1c">
+          <h4 style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">
+            The Information Security Talent Search (ISTS) competition is an annual three day cyber <font color="red">attack</font>/<font color="#065de8">defend</font> competition hosted at the
+            <font color="#e89106">Rochester Institute of Technology</font> by SPARSA.
+            Each year, colleges from around the North East compete for the coveted title of ISTS champion.
+            Competitors are faced with a wide variety of challenges which are designed to cover as many facets of computing security, system administration, networking and programming as we possibly can.
+            These challenges include code review, architecture design, incident response, and policy writing all while defending a completely student built infrastructure.
+          </h4>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div id="bgimg-4" class="bgimg-4">
-<br />
-<br />
-  <div class="container">
-    <h1 class=text-center><b><font color="red" style="font-family: 'Georgia', serif;">Sponsor</font> <font style="font-family: 'Georgia', serif;">ISTS</b></h1><hr width="25%" style="height:3px;background-color:red;border:none;"/>
+    <h1 class="text-center"><b><font style="font-family: 'Georgia', serif;">Past Challenges</font></b></h1>
+
     <div class="row text-center">
-      <div class="col-md-10 col-md-offset-1" style="background-color: #1c1c1c">
-        <h2 class=text-center><b><font style="font-family: 'Georgia', serif;">Why <font color="red">Sponsor?</font></font></b></h2>
-        <p font color="#EEEEEE" style="font-size: 20px;">
-          First and foremost you have access to all participants of ISTS (100+ candidates).
-          This includes competitors, red team members and white team (individuals who build the competition).
-          So whether you’re looking for senior positions, new grads, or interns we have the talent for you. Second, your company’s logo will be on our website and our t-shirts.
-          Additionally our social media presence is growing! During the competition we will be live tweeting events, and that includes spreading the word about our awesome sponsors!
-        </p>
+      <br />
+
+      <div class="col-sm-4">
+        <i class="glyphicon glyphicon-zoom-in"> </i>
+        <h4><font style="font-family: 'Georgia', serif;"><font color="#3ab231">Network/System</font> Audit</font></h4>
+        <p style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">Evaluate the current state of the environment and prepare a presentation highlighting infrastructure vulnerabilities and the appropriate remediation.</p>
       </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-10 col-md-offset-1" style="background-color: #1c1c1c">
-        <h2 class=text-center><b><font style="font-family: 'Georgia', serif;">Sponsorship<font color="#FFD700"> Tiers</font></font></b></h2>
-        <p font color="#EEEEEE" style="font-size: 20px;">
-          Below, are our current sponsorship tiers along with the benefits.
-          Please note that we are more than happy to work with a sponsor to get them their desired result.
-          See something you want featured? <a href="mailto:sparsa@rit.edu">Ask!</a>
-        </p>
+
+      <div class="col-sm-4">
+        <i class="glyphicon glyphicon-eye-open"> </i>
+        <h4><font style="font-family: 'Georgia', serif;"><font color="red"> Threat</font> Intelligence</font></h4>
+        <p style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">Set up a honeypot and report the top fifteen attackers every hour.</p>
+      </div>
+
+      <div class="col-sm-4">
+        <i class="glyphicon glyphicon-cloud"> </i>
+        <h4><font style="font-family: 'Georgia', serif;"><font color="#065de8">System</font> Administration</font></h4>
+        <p style="line-height: 30px;font-family:Arial, Helvetica, sans-serif">Your companies aging servers must be replaced. Evaluate three cloud solutions that we can migrate critical services to. Include a 12 month cost analysis.</p>
       </div>
     </div>
   </div>
+
+  <div id="bgimg-2" class="bgimg-2">
+    <div class="container vertical-center">
+      <div class="jumbotron vertical-center">
+      <div class="row text-center">
+        <blockquote class="blockquote style='vertical-align:middle;'">
+          <h2><font color="#EEEEEE" style="font-size: 30px;">
+            "Not only did I get to test my defensive skills against the professional red team, but my team also got to try out our own offensive techniques against other blue teams.
+            This created a competition atmosphere like no other"
+          </font></h2>
+          <footer class="blockquote-footer"><cite title="Source Title"><font color="#EEEEEE">Skyler T.</font></cite></footer>
+        </blockquote>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bgimg-3" class="bgimg-3">
+    <div class="container">
+      <br />
+      <br />
+      <br />
+      <div class="jumbotron" style='background: rgba(40, 40, 40, 0.7);'>
+        <div class="row text-center">
+          <h2 font color="#EEEEEE">How are we <font color="red" style="font-family: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;"> Different?</font></h2>
+          <hr width="25%" style="height:3px;background-color:red;border:none;"/>
+          <br />
+          <p font color="#EEEEEE" style="font-size: 20px;">
+            From day one of competition planning, ISTS is built from the ground up by students.
+            All of the planning, scheduling, sponsorship and red team outreach is done by passionate members of the Security Practices and Research Student Association (SPARSA).
+            Additionally, competitor’s skills are put to the test by adding an external red team of security professionals from industry partners such as Lincoln Labs, Facebook, NCC Group, ZeroFox and Cigital.
+            The red team is performing offensive actions against the competitors during the entire competition.
+            Notable red team members of past ISTS competitions include Raphael Mudge (Creator of Cobalt Strike), Chris Gates (carnal0wnage), and Rob Fuller (Mubix)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bgimg-4" class="bgimg-4">
   <br />
-  <div class="container">
-	<div class="row">
-    <div class="row db-padding-btm db-attached">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="db-wrapper">
-                        <div class="db-pricing-eleven db-bk-color-one">
-                            <div class="price">
-                                <sup>$</sup>2500
-                                    <small>Gold Tier</small>
-                            </div>
-                            <ul>
-
-                                <li><i class="glyphicon glyphicon-fire"></i>A Red Team Slot </li>
-                                <li><i class="glyphicon glyphicon-plus"></i>Previous Tier's Rewards </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                     <div class="db-wrapper">
-                    <div class="db-pricing-eleven db-bk-color-two popular">
-                        <div class="price">
-                            <sup>$</sup>1000
-                                    <small>Silver Tier</small>
-                        </div>
-                        <ul>
-
-                            <li><i class="glyphicon glyphicon-lock"></i>Add a Challenge to the Competition </li>
-                            <li><i class="glyphicon glyphicon-plus"></i>Previous Tier's Rewards </li>
-                        </ul>
-                    </div>
+  <br />
+    <div class="container">
+      <h1 class=text-center><b><font color="red" style="font-family: 'Georgia', serif;">Sponsor</font> <font style="font-family: 'Georgia', serif;">ISTS</b></h1><hr width="25%" style="height:3px;background-color:red;border:none;"/>
+      <div class="row text-center">
+        <div class="col-md-10 col-md-offset-1" style="background-color: #1c1c1c">
+          <h2 class=text-center><b><font style="font-family: 'Georgia', serif;">Why <font color="red">Sponsor?</font></font></b></h2>
+          <p font color="#EEEEEE" style="font-size: 20px;">
+            First and foremost you have access to all participants of ISTS (100+ candidates).
+            This includes competitors, red team members and white team (individuals who build the competition).
+            So whether you’re looking for senior positions, new grads, or interns we have the talent for you. Second, your company’s logo will be on our website and our t-shirts.
+            Additionally our social media presence is growing! During the competition we will be live tweeting events, and that includes spreading the word about our awesome sponsors!
+          </p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-10 col-md-offset-1" style="background-color: #1c1c1c">
+          <h2 class=text-center><b><font style="font-family: 'Georgia', serif;">Sponsorship<font color="#FFD700"> Tiers</font></font></b></h2>
+          <p font color="#EEEEEE" style="font-size: 20px;">
+            Below, are our current sponsorship tiers along with the benefits.
+            Please note that we are more than happy to work with a sponsor to get them their desired result.
+            See something you want featured? <a href="mailto:sparsa@rit.edu">Ask!</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <br />
+      <div class="container">
+       	<div class="row">
+          <div class="row db-padding-btm db-attached">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="db-wrapper">
+                <div class="db-pricing-eleven db-bk-color-one">
+                  <div class="price">
+                    <sup>$</sup>2500
+                    <small>Gold Tier</small>
                   </div>
+                  <ul>
+                    <li><i class="glyphicon glyphicon-fire"></i>A Red Team Slot </li>
+                    <li><i class="glyphicon glyphicon-plus"></i>Previous Tier's Rewards </li>
+                  </ul>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="db-wrapper">
-                    <div class="db-pricing-eleven db-bk-color-three">
-                        <div class="price">
-                            <sup>$</sup>500
-                                    <small>Bronze Tier</small>
-                        </div>
-                        <ul>
-
-                            <li><i class="glyphicon glyphicon-user"></i>Your Company’s Logo on the Website and Shirts </li>
-                            <li><i class="glyphicon glyphicon-bullhorn"></i>Social Media Shout Outs </li>
-                        </ul>
-                    </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="db-wrapper">
+                <div class="db-pricing-eleven db-bk-color-two popular">
+                  <div class="price">
+                    <sup>$</sup>1000
+                    <small>Silver Tier</small>
                   </div>
+                  <ul>
+                    <li><i class="glyphicon glyphicon-lock"></i>Add a Challenge to the Competition </li>
+                    <li><i class="glyphicon glyphicon-plus"></i>Previous Tier's Rewards </li>
+                  </ul>
                 </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="db-wrapper">
+                <div class="db-pricing-eleven db-bk-color-three">
+                  <div class="price">
+                    <sup>$</sup>500
+                    <small>Bronze Tier</small>
+                  </div>
+                  <ul>
+                    <li><i class="glyphicon glyphicon-user"></i>Your Company’s Logo on the Website and Shirts </li>
+                    <li><i class="glyphicon glyphicon-bullhorn"></i>Social Media Shout Outs </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-</div>
-
-<div id="bgimg-5" class="bgimg-5">
-  <img src="/static/15/img/sponsors.png">
-</div>
-
-<div id="Contact" class="Contact">
-  <br />
-  <br />
-  <div class="row">
-
-    <div class="col-md-4">
-      <br />
-      <h2 align=CENTER><font color="#EEEEEE">White Team Registration</font></h2>
-      <br />
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScrnxAQAFC6nBE6nPM9Llu22RC8P2KSNkgLC8hyuMsvz-bjyg/viewform">
-        <button type="button" class="btn btn-secondary btn-lg center-block">&nbsp&nbsp&nbsp&nbspRegister&nbsp&nbsp&nbsp&nbsp</button>
-      </a>
     </div>
-
-    <div class="col-md-4">
-      <img src="/static/15/img/contact.png" width="75%" height="75%" align="CENTER">
-    </div>
-
-    <div class="col-md-4">
-      <br />
-      <h2 align=CENTER><font color="#065de8">Blue Team Registration</font></h2>
-      <br />
-        <button type="button" class="btn btn-danger btn-lg center-block">&nbsp&nbsp&nbsp&nbspCLOSED&nbsp&nbsp&nbsp&nbsp</button>
-      </a>
-    </div>
-<!--Make this the blue team reg. button once slots open up.
-    <div class="col-md-4">
-      <br />
-      <h2 align=CENTER><font color="#065de8">Blue Team Registration</font></h2>
-      <br />
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFroQXzUs0nzDhmu7PhU3--7dzNdKvtBlUpqhTux6QPpYxMw/viewform">
-        <button type="button" class="btn btn-primary btn-lg center-block">&nbsp&nbsp&nbsp&nbspRegister&nbsp&nbsp&nbsp&nbsp</button>
-      </a>
-    </div>
--->
   </div>
-</div>
+
+  <div id="bgimg-5" class="bgimg-5">
+    <img src="/static/15/img/sponsors.png">
+  </div>
+
+  <div id="Contact" class="Contact">
+    <br />
+    <br />
+    <div class="row">
+
+      <div class="col-md-4">
+        <br />
+        <h2 align=CENTER><font color="#EEEEEE">White Team Registration</font></h2>
+        <br />
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScrnxAQAFC6nBE6nPM9Llu22RC8P2KSNkgLC8hyuMsvz-bjyg/viewform">
+          <button type="button" class="btn btn-secondary btn-lg center-block">&nbsp&nbsp&nbsp&nbspRegister&nbsp&nbsp&nbsp&nbsp</button>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <img src="/static/15/img/contact.png" width="75%" height="75%" align="CENTER">
+      </div>
+
+      <div class="col-md-4">
+        <br />
+        <h2 align=CENTER><font color="#065de8">Blue Team Registration</font></h2>
+        <br />
+          <button type="button" class="btn btn-danger btn-lg center-block">&nbsp&nbsp&nbsp&nbspCLOSED&nbsp&nbsp&nbsp&nbsp</button>
+        </a>
+      </div>
+  <!--Make this the blue team reg. button once slots open up.
+      <div class="col-md-4">
+        <br />
+        <h2 align=CENTER><font color="#065de8">Blue Team Registration</font></h2>
+        <br />
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFroQXzUs0nzDhmu7PhU3--7dzNdKvtBlUpqhTux6QPpYxMw/viewform">
+          <button type="button" class="btn btn-primary btn-lg center-block">&nbsp&nbsp&nbsp&nbspRegister&nbsp&nbsp&nbsp&nbsp</button>
+        </a>
+      </div>
+  -->
+    </div>
+  </div>
 
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-</body>
+  </body>
 <script>
   var captionLength = 0;
   var rd = 'rd';
