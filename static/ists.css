@@ -103,17 +103,14 @@ nav li a {
 /* visited hover active */
 
 nav li a:visited {
-    color: white;
     text-decoration: none;
 }
 
 nav li a:hover {
-    color: white;
     text-decoration: none;
 }
 
 nav li a:active {
-    color: white;
     text-decoration: none;
 }
 
