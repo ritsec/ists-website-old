@@ -3,6 +3,11 @@ layout: base
 title: News
 permalink: /news
 ---
+{% for post in site.posts %}
 <section class="post">
-  <a href="{% post_url 2018-10-10-new-website %}">New Website</a>
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  <p>
+    {{ post.excerpt }}
+  </p>
 </section>
+{% endfor %}
