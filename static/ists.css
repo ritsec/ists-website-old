@@ -145,3 +145,7 @@ nav li:hover {
         display: none;
     }
 }
+
+#archive-cell {
+    text-align: center
+}

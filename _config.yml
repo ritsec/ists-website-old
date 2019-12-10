@@ -30,7 +30,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-include: ['_pages', '_pages/14', '_pages/15']
+include: ['_pages', '_pages/14', '_pages/15', '_pages/17']
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

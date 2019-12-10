@@ -1,0 +1,13 @@
+---
+layout: base
+title: News
+permalink: /news
+---
+{% for post in site.posts %}
+<section class="post">
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  <p>
+    {{ post.excerpt }}
+  </p>
+</section>
+{% endfor %}
