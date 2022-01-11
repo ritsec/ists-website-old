@@ -1,0 +1,49 @@
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+
+  .hero {
+    h1 {
+      font-weight: 600;
+      font-size: 10rem;
+      line-height: 8rem;
+      margin: 0;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 1.75rem;
+      margin: 0;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out 0.75s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .hero {
+    h1 {
+      font-size: 5rem !important;
+      width: 100% !important;
+    }
+
+    h3 {
+      font-size: 1.5rem !important;
+    }
+  }
+}

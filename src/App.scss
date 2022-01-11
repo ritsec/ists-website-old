@@ -1,0 +1,144 @@
+html,
+body,
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: #121212;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // color: #e69138;
+  color: white;
+}
+
+a {
+  color: #e69138;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  padding: 0 10%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-size: 1%;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.15s;
+  animation-fill-mode: forwards;
+}
+
+.mini-hero {
+  height: 15rem;
+  padding-top: 5rem;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+
+.content {
+  width: 100%;
+  min-height: calc(100vh - 15rem);
+  padding: 1rem 10%;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border: #e69138 2px solid;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  font-family: "Roboto", "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+
+  .card-header {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 1rem;
+    padding-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 1px solid #e69138;
+  }
+}
+
+.card-fluid {
+  width: 100%;
+}
+
+.card-fluid-50 {
+  width: 50%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .list-item {
+    color: #e69138;
+
+    .list-icon {
+      margin-right: 1rem;
+    }
+
+    a {
+      color: white;
+      font-size: 1.3rem;
+      transition: all 0.15s ease-out;
+    }
+
+    a:hover {
+      font-size: 1.35rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .hero {
+    text-align: center;
+  }
+
+  .mini-hero {
+    h1 {
+      font-size: 3rem !important;
+    }
+  }
+
+  .content {
+    padding: 1rem !important;
+  }
+
+  .card-fluid-50 {
+    width: 100% !important;
+  }
+
+  .card {
+    .card-header {
+      line-height: 2.5rem;
+    }
+  }
+}
